@@ -67,7 +67,7 @@ fig.line('x','y',source=source_10,color='Blue',line_width=2)
 fig.xaxis[0].axis_label = 'T / Degrees C'
 fig.yaxis[0].axis_label = 'log(Sigma / MPa)'
 fig.x_range=Range1d(400, 600)
-fig.y_range=Range1d(0.8, 2)
+fig.y_range=Range1d(1, 2)
 
 #create a sliders for the variables
 

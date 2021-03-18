@@ -54,9 +54,9 @@ source_1=ColumnDataSource(dict(x=temp_range, y=SellarsTegart_1))
 source_10=ColumnDataSource(dict(x=temp_range, y=SellarsTegart_10))
 
 # Baseline
-fig.line(temp_range, SellarsTegart_01,color='Red',line_width=2,alpha=0.2)
-fig.line(temp_range, SellarsTegart_1,color='Green',line_width=2,alpha=0.2)
-fig.line(temp_range, SellarsTegart_10,color='Blue',line_width=2,alpha=0.2)
+fig.line(temp_range, SellarsTegart_01,color='Red',line_width=2,alpha=0.5)
+fig.line(temp_range, SellarsTegart_1,color='Green',line_width=2,alpha=0.5)
+fig.line(temp_range, SellarsTegart_10,color='Blue',line_width=2,alpha=0.5)
 
 # Updated
 fig.line('x','y',source=source_01,color='Red',line_width=2)

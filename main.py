@@ -8,7 +8,6 @@ from bokeh.layouts import row,column,layout
 def Constitutive_law(Q,A,n,SigmaP,SigmaR,Temp,Rate):    
     # Constants 
     R = 8.31
-    
     Temp = Temp + 273 # convert to Kelvin
     z = Rate*np.exp(Q/(R*Temp))
     yield_stress = 1e6*(SigmaR*np.arcsinh((z/A)**(1.0/n)) + SigmaP)
@@ -24,7 +23,7 @@ SigmaR = 17.39
 # Load in the experimental data
 corrected_exp_data = np.load('data/corrected_exp_data.npy')
 
-# Produce the plot
+#### Produce the plot
 rates = [0.1,1,10] 
 temp_range = np.arange(400,610,10)
 fig=figure() #create a figure
@@ -43,7 +42,6 @@ for rate in rates:
 SellarsTegart_01 = np.zeros(len(temp_range))
 SellarsTegart_1 = np.zeros(len(temp_range))
 SellarsTegart_10 = np.zeros(len(temp_range))
-
 for i in range(len(temp_range)):
     SellarsTegart_01[i] = np.log10(Constitutive_law(Q,A,n,SigmaP,SigmaR,temp_range[i],0.1)*10**(-6)) 
     SellarsTegart_1[i]  = np.log10(Constitutive_law(Q,A,n,SigmaP,SigmaR,temp_range[i],1  )*10**(-6)) 
@@ -74,7 +72,6 @@ fig.yaxis.axis_label_text_font_size = "15pt"
 fig.yaxis.major_label_text_font_size = "15pt"
 
 #create a sliders for the variables
-
 def callback(attrname, old, new):
     
     SigmaP_new = sliderSigmaP.value

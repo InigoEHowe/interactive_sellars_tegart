@@ -68,6 +68,10 @@ fig.xaxis[0].axis_label = 'T / Degrees C'
 fig.yaxis[0].axis_label = 'log(Sigma / MPa)'
 fig.x_range=Range1d(400, 600)
 fig.y_range=Range1d(1, 2)
+fig.xaxis.axis_label_text_font_size = "25pt"
+fig.xaxis.major_label_text_font_size = "25pt"
+fig.yaxis.axis_label_text_font_size = "25pt"
+fig.yaxis.major_label_text_font_size = "25pt"
 
 #create a sliders for the variables
 

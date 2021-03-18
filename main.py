@@ -94,9 +94,9 @@ def callback(attrname, old, new):
     source_1.data  = dict(x=temp_range, y=SellarsTegart_1) 
     source_10.data = dict(x=temp_range, y=SellarsTegart_10) 
 
-sliderSigmaP = Slider(title="SigmaP", value=SigmaP, start=0.0, end=20.0,step=0.1)
+sliderSigmaP = Slider(title="SigmaP", value=SigmaP, start=0.0, end=40.0,step=0.1)
 sliderSigmaR = Slider(title="SigmaR", value=SigmaR, start=0.0, end=20.0,step=0.1)
-sliderQ = Slider(title="Q", value=Q, start=1e5, end=2e5,step=1e4)
+sliderQ = Slider(title="Q", value=Q, start=1e5, end=2e5,step=1e3)
 sliderA = Slider(title="A", value=A, start=6.00e8, end=8.00e8,step=1.00e7)
 slidern = Slider(title="n", value=n, start=4, end=6,step=0.1)
 

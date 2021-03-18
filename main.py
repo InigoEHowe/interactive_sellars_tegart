@@ -80,17 +80,16 @@ def callback(attrname, old, new):
     A_new = sliderA.value
     n_new = slidern.value
     
-    for rate in rates:
-        SellarsTegart_01 = np.zeros(len(temp_range))
-        SellarsTegart_1  = np.zeros(len(temp_range))
-        SellarsTegart_10 = np.zeros(len(temp_range))
-        for i in range(len(temp_range)):
-            SellarsTegart_01[i] = np.log10(Constitutive_law(Q_new,A_new,n_new
-                                                            ,SigmaP_new,SigmaR_new,temp_range[i],0.1)*10**(-6))
-            SellarsTegart_1[i]  = np.log10(Constitutive_law(Q_new,A_new,n_new
-                                                            ,SigmaP_new,SigmaR_new,temp_range[i],1  )*10**(-6))
-            SellarsTegart_10[i] = np.log10(Constitutive_law(Q_new,A_new,n_new
-                                                            ,SigmaP_new,SigmaR_new,temp_range[i],10)*10**(-6))
+    SellarsTegart_01 = np.zeros(len(temp_range))
+    SellarsTegart_1  = np.zeros(len(temp_range))
+    SellarsTegart_10 = np.zeros(len(temp_range))
+    for i in range(len(temp_range)):
+        SellarsTegart_01[i] = np.log10(Constitutive_law(Q_new,A_new,n_new
+                                                        ,SigmaP_new,SigmaR_new,temp_range[i],0.1)*10**(-6))
+        SellarsTegart_1[i]  = np.log10(Constitutive_law(Q_new,A_new,n_new
+                                                        ,SigmaP_new,SigmaR_new,temp_range[i],1  )*10**(-6))
+        SellarsTegart_10[i] = np.log10(Constitutive_law(Q_new,A_new,n_new
+                                                        ,SigmaP_new,SigmaR_new,temp_range[i],10)*10**(-6))
     source_01.data = dict(x=temp_range, y=SellarsTegart_01)
     source_1.data  = dict(x=temp_range, y=SellarsTegart_1) 
     source_10.data = dict(x=temp_range, y=SellarsTegart_10) 

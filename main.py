@@ -26,7 +26,7 @@ corrected_exp_data = np.load('data/corrected_exp_data.npy')
 #### Produce the plot
 rates = [0.1,1,10] 
 temp_range = np.arange(400,610,10)
-fig=figure() #create a figure
+fig=figure() # create a figure of log(sigma) vs T
 curdoc().theme = 'light_minimal' # figure theme
 colours = ['Red','Green','Blue']
 count = 0
